@@ -24,9 +24,9 @@
     <!-- header -->
     <header class="header">
       <a href="#" class="logo">i'm carlos.</a>
-      <!-- <span class="dropdown"><i class="fa-solid fa-bars"></i></span> -->
-      <nav class="navbar">
-        <!-- <i class="fa-solid fa-circle-xmark"></i> -->
+      <span class="dropdown" onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
+      <nav id="sideMenu" class="navbar">
+        <i class="timesClose fa-solid fa-circle-xmark" onclick="closeNav()"></i>
         <a href="#home" class="active">Home</a>
         <a href="#aboutMe">About Me</a>
         <a href="#myService">My service</a>
@@ -385,6 +385,16 @@
         } else {
           aboutBody.classList.remove("padding-experience");
         }
+      }
+    </script>
+    <script>
+      function openNav() {
+        var nav = document.getElementById("sideMenu");
+        nav.classList.add("active-nav");
+      }
+      function closeNav() {
+        var nav = document.getElementById("sideMenu");
+        nav.classList.remove("active-nav");
       }
     </script>
   </body>
