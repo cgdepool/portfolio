@@ -797,13 +797,11 @@ footer{
   }
 }
 
-.timesClose{display: none;}
+.timesClose{display: none !important;}
 
 @media only screen and (max-width: 920px) {
-  .dropdown{display:block;}
-  .home-img, nav.navbar{
-    display: none;
-  }
+  .dropdown, .timesClose{display:block !important;}
+  .home-img{display: none;}
   .home-content {
     width: 100%;
   }
@@ -811,19 +809,22 @@ footer{
     height: 100vh;
     width: 200px;
     position: absolute;
-    right: 0;
+    right: 0px;
+    transform: translateX(100%);
     top: 0;
     flex-direction: column;
     justify-content: start;
     align-items: start;
     background: #00CAE0;
     padding: 40px 15px;
+    transition: transform 0.5s ease-in-out;
   }
+
   #sideMenu.active-nav{
-    display: flex;
+    transform: translateX(0);
   }
-  .timesClose{display: block;}
-  #sideMenu.active-nav .button{
+
+  #sideMenu .button{
     position: absolute;
     bottom: 15px;
   }
