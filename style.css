@@ -283,16 +283,16 @@ body {
   flex-wrap: wrap;
   margin-top: auto;
   margin-bottom: auto;
-  background: white
 }
 
 .img-about{
   flex-basis: 35%;
-  width: 35%;
   padding-bottom: 35%;
   overflow: hidden;
   border-radius: 50%;
   position: relative;
+  background: #3e514c;
+  height: 100%;
 }
 
 .img-about img{
@@ -307,7 +307,6 @@ body {
 .text-about{
   flex-basis: 60%;
   padding-right: 5%;
-  background: gray;
 }
 
 .title-about{
@@ -836,6 +835,13 @@ footer{
   #sideMenu .button{
     position: absolute;
     bottom: 15px;
+  }
+  .aboutBody{
+    justify-content: center;
+  }
+  .text-about{
+    flex-basis:100%;
+    padding: 40px 0;
   }
 }
 
